@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS `crud`;
+USE `crud`;
+
+DROP TABLE IF EXISTS `customers`;
+CREATE TABLE `customers` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `email` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(20) NOT NULL,
+    `phone` VARCHAR(10) NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
